@@ -25,7 +25,7 @@ spec:
         app.kubernetes.io/instance: devfile-sample-cm7m
     spec:
       containers:
-      - image: quay.io/arewm/sporks:NA_QT-devfile-sample-cm7m
+      - image: quay.io/arewm/sporks@sha256:2e73f7b2a6c855b0c0899f635be3bd2585125a7c1819ec9250b6bed8b1cf60da
         name: my-nodejs
         ports:
         - containerPort: 3001
