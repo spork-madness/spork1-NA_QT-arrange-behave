@@ -1,0 +1,41 @@
+apiVersion: apps/v1
+kind: Deployment
+metadata:
+  creationTimestamp: null
+  labels:
+    app.kubernetes.io/created-by: application-service
+    app.kubernetes.io/instance: devfile-sample-go-basic-hagz
+    app.kubernetes.io/managed-by: kustomize
+    app.kubernetes.io/name: devfile-sample-go-basic-hagz
+    app.kubernetes.io/part-of: spork1
+  name: devfile-sample-go-basic-hagz
+  namespace: user1-tenant
+spec:
+  replicas: 1
+  selector:
+    matchLabels:
+      app: go-app
+      app.kubernetes.io/instance: devfile-sample-go-basic-hagz
+  strategy: {}
+  template:
+    metadata:
+      creationTimestamp: null
+      labels:
+        app: go-app
+        app.kubernetes.io/instance: devfile-sample-go-basic-hagz
+    spec:
+      containers:
+      - image: quay.io/arewm/sporks:NA_QT-devfile-sample-go-basic-hagz
+        name: my-go
+        ports:
+        - containerPort: 8081
+          name: http
+          protocol: TCP
+        resources:
+          limits:
+            cpu: 100m
+            memory: 100Mi
+          requests:
+            cpu: 10m
+            memory: 10Mi
+status: {}
