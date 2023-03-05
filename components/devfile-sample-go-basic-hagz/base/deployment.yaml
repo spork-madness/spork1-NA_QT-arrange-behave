@@ -25,7 +25,7 @@ spec:
         app.kubernetes.io/instance: devfile-sample-go-basic-hagz
     spec:
       containers:
-      - image: quay.io/arewm/sporks@sha256:d0b8ba13209c164f72b50cd9bfc9ba877713ab5fa85ff1978c31116105665813
+      - image: quay.io/arewm/sporks@sha256:a79b316f7e2ec01446dc47ad4d54a667c21470a2bbc18898322bf8e5d61e5f87
         name: my-go
         ports:
         - containerPort: 8081
